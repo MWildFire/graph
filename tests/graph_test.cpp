@@ -1,6 +1,6 @@
 #include <catch.hpp>
 #include <sstream>
-#include "graph_t.hpp"
+#include "graph.cpp"
 
 TEST_CASE ("creating, printing graph, adding edge")
 {
