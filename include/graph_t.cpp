@@ -35,6 +35,7 @@ public:
         }
     }
     
+    
     void removeEdge(int i, int j)
     {
         if (i >= 0 && i < vertexCount && j > 0 && j < vertexCount)
