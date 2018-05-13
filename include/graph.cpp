@@ -80,23 +80,23 @@ public:
     
     enum VertexState { White, Gray, Black };
     
-    void DFS()
+    VertexState* DFS()
     {
         VertexState *state = new VertexState[vertexCount];
         for (int i = 0; i < vertexCount; i++)
             state[i] = White;
         runDFS(0, state);
-        delete [] state;
+        return state[];
     }
     
-    void runDFS(int u, VertexState state[])
+    VertexState* runDFS(int u, VertexState state[])
     {
         state[u] = Gray;
         for (int v = 0; v < vertexCount; v++)
             if (isEdge(u, v) && state[v] == White)
                 runDFS(v, state);
         state[u] = Black;
-        DFSinfo();
+        return state[];
     }
     
     bool DFSinfo(VertexState state[])
