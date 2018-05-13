@@ -96,15 +96,14 @@ public:
             if (isEdge(u, v) && state[v] == White)
                 runDFS(v, state);
         state[u] = Black;
+        DFSinfo();
     }
     
     bool DFSinfo(VertexState state[])
     {
-        for (int i = 0; i < vertexCount; i ++)
-        {
-            if (state[i] != Black)
-                return false;
-        }
-        return true;
+        if (state[i] != Black)
+            return false;
+        else
+            return true;
     }
 };
