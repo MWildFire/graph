@@ -47,7 +47,6 @@ TEST_CASE ("removing edges")
 
 
 
-
 TEST_CASE ("testing DFS")
 {
     graph_t graph(6);
@@ -57,8 +56,8 @@ TEST_CASE ("testing DFS")
     graph.addEdge(3,4);
     graph.DFS();
     graph_t::VertexState *state = new graph_t::VertexState[6];
+    state = graph.VertexState;
     for (int i = 0; i < 6; i++)
         REQUIRE (state[i] == graph_t::Black);
 }
-
 
