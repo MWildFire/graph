@@ -4,7 +4,7 @@
 
 TEST_CASE ("creating, printing graph, adding edge")
 {
-    graph_t graph(6);
+    graph_t graph(5);
     graph.addEdge(4,5);
     graph.addEdge(1,4);
     graph.addEdge(4,2);
@@ -24,7 +24,7 @@ TEST_CASE ("creating, printing graph, adding edge")
 
 TEST_CASE ("removing edges")
 {
-    graph_t graph(6);
+    graph_t graph(5);
     graph.addEdge(4,5);
     graph.addEdge(1,4);
     graph.addEdge(4,2);
@@ -48,7 +48,7 @@ TEST_CASE ("removing edges")
 
 TEST_CASE ("testing DFS")
 {
-    graph_t graph(6);
+    graph_t graph(5);
     graph.addEdge(4,5);
     graph.addEdge(1,4);
     graph.addEdge(4,2);
