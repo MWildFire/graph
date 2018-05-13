@@ -86,7 +86,7 @@ public:
         for (int i = 0; i < vertexCount; i++)
             state[i] = White;
         runDFS(0, state);
-        return state[];
+        return state;
     }
     
     VertexState* runDFS(int u, VertexState state[])
@@ -96,10 +96,10 @@ public:
             if (isEdge(u, v) && state[v] == White)
                 runDFS(v, state);
         state[u] = Black;
-        return state[];
+        return state;
     }
     
-    bool DFSinfo(VertexState state[])
+    bool DFSinfo(VertexState state[], int i)
     {
         if (state[i] != Black)
             return false;
