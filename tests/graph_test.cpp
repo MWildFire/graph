@@ -5,9 +5,9 @@
 TEST_CASE ("creating, printing graph, adding edge")
 {
     graph_t graph(5);
+    graph.addEdge(4,5);
     graph.addEdge(1,4);
     graph.addEdge(4,2);
-    graph.addEdge(4,5);
     graph.addEdge(5,3);
     std::string output
     {
@@ -25,9 +25,9 @@ TEST_CASE ("creating, printing graph, adding edge")
 TEST_CASE ("removing edges")
 {
     graph_t graph(5);
+    graph.addEdge(4,5);
     graph.addEdge(1,4);
     graph.addEdge(4,2);
-    graph.addEdge(4,5);
     graph.addEdge(5,3);
     graph.removeEdge(5,3);
     std::string output
@@ -49,9 +49,9 @@ TEST_CASE ("removing edges")
 TEST_CASE ("testing DFS")
 {
     graph_t graph(5);
+    graph.addEdge(4,5);
     graph.addEdge(1,4);
     graph.addEdge(4,2);
-    graph.addEdge(4,5);
     graph.addEdge(5,3);
     graph.DFS();
     graph_t::VertexState *state = new graph_t::VertexState[6];
