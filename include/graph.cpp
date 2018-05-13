@@ -91,7 +91,7 @@ public:
     VertexState* runDFS(int u, VertexState state[])
     {
         state[u] = Gray;
-        for (int v = 0; v < vertexCount; v++)
+        for (int v = 1; v < vertexCount; v++)
             if (isEdge(u, v) && state[v] == White)
                 runDFS(v, state);
         state[u] = Black;
