@@ -4,18 +4,19 @@
 
 TEST_CASE ("creating, printing graph, adding edge")
 {
-    graph_t graph(5);
+    graph_t graph(6);
     graph.addEdge(4,5);
     graph.addEdge(1,4);
     graph.addEdge(4,2);
     graph.addEdge(5,3);
     std::string output
     {
-        "0 0 0 1 0\n"
-        "0 0 0 1 1\n"
-        "0 0 0 0 1\n"
-        "1 1 0 0 1\n"
-        "0 1 1 1 0\n"
+        "0 0 0 0 0 0\n"
+        "0 0 0 0 1 0\n"
+        "0 0 0 0 1 1\n"
+        "0 0 0 0 0 1\n"
+        "0 1 1 0 0 1\n"
+        "0 0 0 1 1 0\n"
     };
     std::ostringstream stream;
     graph.printMatrix(stream);
@@ -24,7 +25,7 @@ TEST_CASE ("creating, printing graph, adding edge")
 
 TEST_CASE ("removing edges")
 {
-    graph_t graph(5);
+    graph_t graph(6);
     graph.addEdge(4,5);
     graph.addEdge(1,4);
     graph.addEdge(4,2);
@@ -32,11 +33,12 @@ TEST_CASE ("removing edges")
     graph.removeEdge(5,3);
     std::string output
     {
-        "0 0 0 1 0\n"
-        "0 0 0 1 1\n"
-        "0 0 0 0 0\n"
-        "1 1 0 0 1\n"
-        "0 1 0 1 0\n"
+        "0 0 0 0 0 0\n"
+        "0 0 0 0 1 0\n"
+        "0 0 0 0 1 1\n"
+        "0 0 0 0 0 0\n"
+        "0 1 1 0 0 1\n"
+        "0 0 0 0 1 0\n"
     };
     std::ostringstream stream;
     graph.printMatrix(stream);
@@ -48,7 +50,7 @@ TEST_CASE ("removing edges")
 
 TEST_CASE ("testing DFS")
 {
-    graph_t graph(5);
+    graph_t graph(6);
     graph.addEdge(4,5);
     graph.addEdge(1,4);
     graph.addEdge(4,2);
