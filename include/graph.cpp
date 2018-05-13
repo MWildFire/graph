@@ -98,7 +98,7 @@ public:
         state[u] = Black;
     }
     
-    bool DSFinfo(VertexState state[])
+    bool DFSinfo(VertexState state[])
     {
         for (int i = 0; i < vertexCount; i ++)
         {
