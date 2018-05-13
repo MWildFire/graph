@@ -93,9 +93,13 @@ public:
     {
         state[u] = Gray;
         for (int v = 1; v < vertexCount; v++)
+        {
             if (isEdge(u, v) && state[v] == White)
+            {
+                state[u] = Black;
                 runDFS(v, state);
-        state[u] = Black;
+            }
+        } 
         return state;
     }
     
@@ -109,11 +113,5 @@ public:
         return true;
     }
     
-    void printDSFinfo(VertexState state[], std::ostringstream & stream)
-    {
-        for (int i = 0; i < vertexCount; i ++)
-        {
-            stream << state[i] << std::endl;
-        }
-    }
+
 };
