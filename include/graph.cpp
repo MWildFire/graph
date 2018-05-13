@@ -86,7 +86,6 @@ public:
         for (int i = 0; i < vertexCount; i++)
             state[i] = White;
         runDFS(0, state);
-        return state;
     }
     
     VertexState* runDFS(int u, VertexState state[])
