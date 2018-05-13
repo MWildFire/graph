@@ -58,3 +58,18 @@ TEST_CASE ("testing DFS")
     REQUIRE (graph.DFSinfo(graph.DFS()) == true);
 }
 
+TEST_CASE ("testing print DFS")
+{
+    graph_t graph(6);
+    graph.addEdge(0,1);
+    graph.addEdge(1,2);
+    graph.addEdge(2,3);
+    graph.addEdge(3,4);
+    string input
+    {
+        ",,,"
+    }
+    std::ostringstream stream;
+    graph.printDSFinfo(stream);
+    REQUIRE(stream.str()==output);
+}
