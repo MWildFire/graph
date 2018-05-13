@@ -100,13 +100,14 @@ public:
     
     bool DFSinfo()
     {
-        VertexState *state = new VertexState[vertexCount];
-        for (int i = 0; i < vertexCount; i++)
+        this->DFS();
+        VertexState *state = new VertexState[this->vertexCount];
+        for (int i = 0; i < this->vertexCount; i++)
         {
             if (state[i] != 2)
             {
                 return false;
-            } 
+            }
         }
         return true;
     }
