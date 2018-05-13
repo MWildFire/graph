@@ -101,7 +101,7 @@ public:
     
     bool DFSinfo(VertexState state[])
     {
-        for (int i = 0; i < VertexCount; i++)
+        for (int i = 0; i < vertexCount; i++)
         {
             if (state[i] != Black)
             return false;
