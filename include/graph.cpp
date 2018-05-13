@@ -102,10 +102,15 @@ public:
         state[u] = Black;
     }
     
-    int DFSinfo()
+    bool DSFinfo()
     {
         VertexState *state = new VertexState[vertexCount];
         for (int i = 0; i < vertexCount; i++)
-            return state[i];
+        {
+            if (state[i] == Black)
+            {
+                return true;
+            } else return false;
+        }
     }
 };
