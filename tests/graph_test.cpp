@@ -55,6 +55,6 @@ TEST_CASE ("testing DFS")
     graph.addEdge(2,3);
     graph.addEdge(3,4);
     graph.DFS();
-    REQUIRE (graph.DFSinfo(graph.DFS()) == true);
+    REQUIRE (graph.DFSinfo(graph.DFS(), i) == true);
 }
 
