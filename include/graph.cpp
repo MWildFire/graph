@@ -107,10 +107,11 @@ public:
         VertexState *state = new VertexState[vertexCount];
         for (int i = 0; i < vertexCount; i++)
         {
-            if (state[i] == Black)
+            if (state[i] != Black)
             {
-                return true;
-            } else return false;
+                return false;
+            } 
         }
+        else return true;
     }
 };
