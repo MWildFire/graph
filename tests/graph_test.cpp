@@ -51,14 +51,14 @@ TEST_CASE ("removing edges")
 TEST_CASE ("testing DFS")
 {
     graph_t graph(6);
-    graph.addEdge(0,3);
-    graph.addEdge(1,2);
-    graph.addEdge(1,3);
-    graph.addEdge(3,4);
     graph.addEdge(4,5);
+    graph.addEdge(1,4);
+    graph.addEdge(4,2);
+    graph.addEdge(5,3);
     graph.DFS();
-    graph_t::VertexState *state = new graph_t::VertexState[6];
+    graph_t::VertexState state[6];
     for (int i = 0; i < 6; i++)
-    REQUIRE (state[i] == graph_t::Black);
+        REQUIRE (state[i] == graph_t::Black);
 }
+
 
