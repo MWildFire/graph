@@ -109,7 +109,7 @@ public:
         return true;
     }
     
-    void printDSFinfo(VertexState state[], ostringstream & stream)
+    void printDSFinfo(VertexState state[], std::ostringstream & stream)
     {
         for (int i = 0; i < vertexCount; i ++)
         {
