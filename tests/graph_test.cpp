@@ -56,8 +56,8 @@ TEST_CASE ("testing DFS")
     graph.addEdge(2,3);
     graph.addEdge(3,4);
     graph.DFS();
-    VertexState *state = new VertexState[graph_t::vertexCount_()];
-    for (int i = 0; i < graph_t::vertexCount_(); i++)
+    graph_t::VertexState *state = new graph_t::VertexState[6];
+    for (int i = 0; i < 6; i++)
         REQUIRE (state[i] == graph_t::Black);
 }
 
