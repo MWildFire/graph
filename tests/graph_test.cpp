@@ -57,6 +57,6 @@ TEST_CASE ("testing DFS")
     graph.DFS();
     graph.DFSinfo();
     for (i = 0; i < 6; i++)
-        REQUIRE (state[i] == graph_t::Black);
+        REQUIRE (graph.DSFinfo() == true);
 }
 
