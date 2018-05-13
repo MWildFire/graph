@@ -96,9 +96,9 @@ public:
         {
             if (isEdge(u, v) && state[v] == White)
             {
-                state[u] = Black;
                 runDFS(v, state);
             }
+            state[u] = Black;
         } 
         return state;
     }
