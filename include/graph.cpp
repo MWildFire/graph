@@ -57,10 +57,10 @@ public:
     {
         if (adjacencyMatrix)
         {
-            for (int i = 0; i < vertexCount; i++)
+            for (int i = 0; i < vertexCount; ++i)
             {
                 stream << "\n";
-                for (int j = 0; j < vertexCount; j++)
+                for (int j = 0; j < vertexCount; ++j)
                 {
                     stream << adjacencyMatrix[i][j];
                     if( j != vertexCount - 1 )
