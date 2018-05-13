@@ -98,16 +98,12 @@ public:
         state[u] = Black;
     }
     
-    bool DFSinfo()
+    bool DSFinfo(VertexState state[])
     {
-        this->DFS();
-        VertexState *state = new VertexState[this->vertexCount];
-        for (int i = 0; i < this->vertexCount; i++)
+        for (int i = 0; i < vertexCount; i ++)
         {
-            if (state[i] != 2)
-            {
+            if (state[i] != Black)
                 return false;
-            }
         }
         return true;
     }
