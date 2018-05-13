@@ -24,7 +24,7 @@ TEST_CASE ("removing edges")
     graph_t graph(6);
     graph.addEdge(2,3);
     graph.addEdge(3,4);
-    graph.addEdge(4,5)
+    graph.addEdge(4,5);
     graph.removeEdge(3,4);
     std::string output
     {
@@ -33,7 +33,7 @@ TEST_CASE ("removing edges")
         "0 1 0 0 0 0\n"
         "0 0 0 0 1 0\n"
         "0 0 0 1 0 0\n"
-        "0 0 0 0 0 0\n
+        "0 0 0 0 0 0\n"
     };
     std::ostringstream stream;
     graph.printMatrix(stream);
