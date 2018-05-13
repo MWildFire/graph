@@ -102,7 +102,7 @@ public:
         VertexState *state = new VertexState[vertexCount];
         for (int i = 0; i < vertexCount; i++)
         {
-            if (state[i] != Black)
+            if (state[i] != White)
             {
                 return false;
             } 
