@@ -113,7 +113,7 @@ public:
     {
         for (int i = 0; i < vertexCount; i ++)
         {
-            stream << "State:" << state[i] << std::endl;
+            stream << state[i] << std::endl;
         }
     }
 };
