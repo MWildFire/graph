@@ -99,11 +99,13 @@ public:
         return state;
     }
     
-    bool DFSinfo(VertexState state[], int i)
+    bool DFSinfo(VertexState state[])
     {
-        if (state[i] != Black)
+        for (int i = 0; i < VertexCount; i++)
+        {
+            if (state[i] != Black)
             return false;
-        else
-            return true;
+        }
+        return true;
     }
 };
