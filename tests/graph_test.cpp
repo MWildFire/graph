@@ -11,7 +11,7 @@ TEST_CASE ("creating, printing graph, adding edge")
     graph.addEdge(5,3);
     std::string output
     {
-        "0 0 0 0 0 0\n"
+        "\n0 0 0 0 0 0\n"
         "0 0 0 0 1 0\n"
         "0 0 0 0 1 0\n"
         "0 0 0 0 0 1\n"
@@ -33,7 +33,7 @@ TEST_CASE ("removing edges")
     graph.removeEdge(5,3);
     std::string output
     {
-        "0 0 0 0 0 0\n"
+        "\n0 0 0 0 0 0\n"
         "0 0 0 0 1 0\n"
         "0 0 0 0 1 0\n"
         "0 0 0 0 0 0\n"
@@ -51,10 +51,10 @@ TEST_CASE ("removing edges")
 TEST_CASE ("testing DFS")
 {
     graph_t graph(6);
+    graph.addEdge(1,2);
+    graph.addEdge(2,3);
+    graph.addEdge(3,4);
     graph.addEdge(4,5);
-    graph.addEdge(1,4);
-    graph.addEdge(4,2);
-    graph.addEdge(5,3);
     graph.DFS();
     graph_t::VertexState *state = new graph_t::VertexState[6];
     for (int i = 0; i < 6; i++)
