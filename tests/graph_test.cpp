@@ -16,7 +16,7 @@ TEST_CASE ("creating, printing graph, adding edge")
         "0 0 0 0 1 0\n"
         "0 0 0 0 0 1\n"
         "0 1 1 0 0 1\n"
-        "0 0 0 1 1 0\n"
+        "0 0 0 1 1 0"
     };
     std::ostringstream stream;
     graph.printMatrix(stream);
@@ -38,7 +38,7 @@ TEST_CASE ("removing edges")
         "0 0 0 0 1 0\n"
         "0 0 0 0 0 0\n"
         "0 1 1 0 0 1\n"
-        "0 0 0 0 1 0\n"
+        "0 0 0 0 1 0"
     };
     std::ostringstream stream;
     graph.printMatrix(stream);
