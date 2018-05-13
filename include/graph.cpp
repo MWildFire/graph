@@ -108,4 +108,12 @@ public:
         }
         return true;
     }
+    
+    void printDSFinfo(VertexState state[], ostringstream & stream)
+    {
+        for (int i = 0; i < vertexCount; i ++)
+        {
+            stream << i << "=" << state[i] << std::endl;
+        }
+    }
 };
