@@ -102,7 +102,7 @@ public:
         state[u] = Black;
     }
     
-    int VertexState()
+    int DFSinfo()
     {
         VertexState *state = new VertexState[vertexCount];
         for (int i = 0; i < vertexCount; i++)
