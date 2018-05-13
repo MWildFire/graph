@@ -107,10 +107,10 @@ public:
     {
         for (int i = 0; i < vertexCount; i++)
         {
-            if (state[i] != Black)
-            return false;
+            if (state[i] == Black)
+            return true;
         }
-        return true;
+        return false;
     }
     
 
