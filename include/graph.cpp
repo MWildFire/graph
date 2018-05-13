@@ -45,11 +45,6 @@ public:
         }
     }
     
-    int vertexCount_()
-    {
-        return vertexCount;
-    }
-    
     bool isEdge(int i, int j)
     {
         if (i >= 0 && i < vertexCount && j > 0 && j < vertexCount)
@@ -111,7 +106,7 @@ public:
             {
                 return false;
             } 
+                else return true;
         }
-        else return true;
     }
 };
