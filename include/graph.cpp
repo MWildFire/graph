@@ -101,4 +101,11 @@ public:
                 runDFS(v, state);
         state[u] = Black;
     }
+    
+    int VertexState()
+    {
+        VertexState *state = new VertexState[vertexCount];
+        for (int i = 0; i < vertexCount; i++)
+            return state[i];
+    }
 };
